@@ -17,7 +17,7 @@ public class tarea01_1 {
 	
 	public static void main(String[] args) {
 		
-		byte llave = 9; //definimos la llave
+		short llave = 30000; //definimos la llave
 		String mensaje = JOptionPane.showInputDialog("Mensaje para codificar: "); //pedimos al usuario el mensaje a codificar
 		
 		String mensajeCodificado = codificadorXOR(mensaje, llave); //aplicamos metodo 
