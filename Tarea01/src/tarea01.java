@@ -26,7 +26,7 @@ public class tarea01 {
 		
 		String cadenaResultante = "";
 	       
-		 for (char c : cadena.toCharArray()) { //ciclo for each, el ciclo itera sobre cada caracter de la cadena  "cadena" y el metodo "toCharArray" convierte la cadena en un array de caracteres
+		 for (char c : cadena.toCharArray()) { //ciclo for each, el ciclo itera sobre cada caracter de el arreglo  "cadena" y el metodo "toCharArray" convierte la cadena en un arreglo de caracteres
 			  if (c >= 'a' && c <= 'z') {//Verifica si el caracter es una letra minuscula (esto servira solo para decodificar el mensaje codificado
 	                cadenaResultante += (char) ('a' + (c - 'a' + 13) % 26); //Aplicamos el rot13 y lo agregamos a la cadena "cadenaResultante"
 	            } else if (c >= 'A' && c <= 'Z') { 
