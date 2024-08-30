@@ -18,13 +18,14 @@ public class tarea01_1 {
 	public static void main(String[] args) {
 		
 		short llave = 10791; //definimos la llave
-		String mensaje = JOptionPane.showInputDialog("Mensaje para codificar: "); //pedimos al usuario el mensaje a codificar
+		String mensaje = JOptionPane.showInputDialog("Mensaje para codificarXOR: "); //pedimos al usuario el mensaje a codificar
 		
 		String mensajeCodificado = codificadorXOR(mensaje, llave); //aplicamos metodo 
 		
 		JOptionPane.showMessageDialog(null, mensajeCodificado, "Mensaje codificado", JOptionPane.INFORMATION_MESSAGE);//imprimimos mensaje codificado
 		
-		String mensajeDecodificado = codificadorXOR(mensajeCodificado, llave); //para decodificar nada mas volvemos a aplicar el metodo en la cadena codificada
+		String mensajeDecodificado = codificadorXOR(mensajeCodificado, llave); //para decodificar nada mas volvemos a 
+																			   //aplicar el metodo en la cadena codificada
 		
 		JOptionPane.showMessageDialog(null, mensajeDecodificado, "Mensaje Decodificado", JOptionPane.INFORMATION_MESSAGE);
 

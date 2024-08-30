@@ -2,8 +2,8 @@ import javax.swing.JOptionPane;
 
 public class tarea01 {
 
-	//Creamos un metodo para limpiar la string de acentos o de la ñ
-	public static String limpiadorDeString(String caracter) {
+	//Creamos un metodo para limpiar la cadena de acentos o de la ñ
+	public static String limpiadorDeCadena(String caracter) {
 		
 		//Remplazamos los caracteres con acento y la ñ 
 		caracter = caracter.replace('á', 'a');
@@ -26,9 +26,12 @@ public class tarea01 {
 		
 		String cadenaResultante = "";
 	       
-		 for (char c : cadena.toCharArray()) { //ciclo for each, el ciclo itera sobre cada caracter de el arreglo  "cadena" y el metodo "toCharArray" convierte la cadena en un arreglo de caracteres
-			  if (c >= 'a' && c <= 'z') {//Verifica si el caracter es una letra minuscula (esto servira solo para decodificar el mensaje codificado
-	                cadenaResultante += (char) ('a' + (c - 'a' + 13) % 26); //Aplicamos el rot13 y lo agregamos a la cadena "cadenaResultante"
+		 for (char c : cadena.toCharArray()) { //ciclo for each, el ciclo itera sobre cada caracter de el arreglo  "cadena" y 
+			 									//el metodo "toCharArray" convierte la cadena en un arreglo de caracteres
+			  if (c >= 'a' && c <= 'z') {//Verifica si el caracter es una letra minuscula 
+				  						 //(esto servira solo para decodificar el mensaje codificado
+	                cadenaResultante += (char) ('a' + (c - 'a' + 13) % 26); //Aplicamos el rot13 y 
+	                														//lo agregamos a la cadena "cadenaResultante"
 	            } else if (c >= 'A' && c <= 'Z') { 
 	                cadenaResultante += (char) ('A' + (c - 'A' + 13) % 26);
 	            } else {
@@ -46,7 +49,7 @@ public class tarea01 {
 		String mensajeSecreto = JOptionPane.showInputDialog("Escriba el mensaje secreto: ");
 		
 		//Limpiamos el mensaje y lo convertimos a mayusculas
-		String mensajeSecretoLimpio = limpiadorDeString(mensajeSecreto).toUpperCase();
+		String mensajeSecretoLimpio = limpiadorDeCadena(mensajeSecreto).toUpperCase();
 		
 		//Aplicamos metodo rot13 a la cadena y lo imprimimos
 		String mensajeCodificado = rot13(mensajeSecretoLimpio);
