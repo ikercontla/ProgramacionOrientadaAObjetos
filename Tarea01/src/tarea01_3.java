@@ -1,5 +1,7 @@
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class tarea01_3 {
 
 	public static void main(String[] args) {
@@ -7,13 +9,19 @@ public class tarea01_3 {
 		//Parte 4 de la tarea
 		//Numeros randoms
 		
-		
+		int sumaNumero = 0;
 		//Primer metodo
-//		for (int i = 1; i<=1000; i++) { //ciclo for para generar 1000 numeros
-//			int numero = (int) ((Math.random()*(100 - 1)) + 1); //metodo para generar numeros random
-//																//genera numeros del 1 al 100 (incluyente)
-//			System.out.printf("%d\n", numero); //imprimimos el numero generado
-//		}
+		for (int i = 1; i<=1000; i++) { //ciclo for para generar 1000 numeros
+			int numero = (int) ((Math.random()*(100 - 1)) + 1); //metodo para generar numeros random
+															//genera numeros del 1 al 100 (incluyente)
+			sumaNumero = sumaNumero+numero; 
+			System.out.printf("%d\n", numero); //imprimimos el numero generado
+			
+		}
+		
+		double mediaNumero = sumaNumero/1000;
+		JOptionPane.showMessageDialog(null, sumaNumero, "Suma primer metodo", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, mediaNumero, "Media primer metodo", JOptionPane.INFORMATION_MESSAGE);
 		
 		
 		//Segundo metodo
@@ -23,6 +31,8 @@ public class tarea01_3 {
 			
 			System.out.printf("%d\n", numeroSegundo);
 		}
+		
+		//Tendremos que sacar la media y la desviacion estandar de cada datos generados y comparar 
 		
 	}//fin clase main
 
