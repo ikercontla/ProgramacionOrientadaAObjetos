@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class tarea01_1 {
 
-	//Segunda parte del ejercicio
+	//Segunda parte de la tarea
 	//Definimos metodo para codificar utilizando xOR
 	public static String codificadorXOR(String mensaje, int llave){ //recibe dos argumentos: mensaje para codificar y la llave con la se codificara
 		
