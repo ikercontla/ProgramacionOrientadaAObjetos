@@ -14,7 +14,22 @@ public class TestRectangle {
 		
 		myRectangle.base = 2.0; //cambiamos el atributo "base" y le asignamos 2.0
 		myRectangle.altura = 3.0; //cambiamos el atributo "altura" y le asignamos 3.0
-		System.out.println(myRectangle.area());
+		System.out.println(myRectangle.area()); //imprimmos el area
+		
+		Rectangle myRectangle2 = new Rectangle();
+		
+		myRectangle2.base = 7.0;
+		myRectangle2.altura = 12.0;
+		System.out.println(myRectangle2.area());
+		
+		myRectangle.print(); //utilizamos el metodo print para imprimir los atributos del rectangulo
+		myRectangle2.print();
+		
+		Rectangle myRectangle3 = new Rectangle();
+		myRectangle3.base = -15.0;
+		
+		System.out.println(myRectangle3.area());
+		
 	}//Fin clase main
 
 }

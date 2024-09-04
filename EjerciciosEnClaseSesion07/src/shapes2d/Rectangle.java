@@ -2,6 +2,8 @@ package shapes2d;
 
 public class Rectangle {
 	
+	
+	//Todo este ejercicio es una mala practica en el proyecto EjerciciosEnClaseSesion08 es la buena practica
 	//definimos atributos de la clase Rectangle
 	public double base = 1.0; // 1.0 es el valor default de la base
 	public double altura = 1.0; // valor default
@@ -21,7 +23,7 @@ public class Rectangle {
 	//print
 	
 	public void print() { //void porque no va a regresar nada
-		System.out.printf("Base: " + base + "Altura: " + altura);
+		System.out.printf("Base: " + base + ", Altura: " + altura + "\n");
 		
 	}
 	
