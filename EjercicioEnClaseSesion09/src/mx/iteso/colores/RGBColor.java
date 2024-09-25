@@ -15,6 +15,7 @@ package mx.iteso.colores;
 	//getMagenta() int
 	//getYellow() int
 	//getRGB() int
+
 public class RGBColor {
 
 	//primer paso	
@@ -191,4 +192,45 @@ public class RGBColor {
 	//su representacion hexadecimal es: [hex]"
 								
 	
+	//metodo clone
+	//public y de tipo RGBColor porque va a regresar un objeto de la clase RGBColor
+	public RGBColor clone () {
+		//Realizamos una copia profunda del objeto
+		//dos objetos diferentes pero con el mismo estado interno
+		RGBColor newColor = new RGBColor(this.red, this.green, this.blue, this.name);
+		return newColor;
+	}
+	
+	//metodo equals 
+	//hace comparacion profunda es decir va a ir atributo por atributo comparandolos
+	public boolean equals (Object o) { //El metodo equals recibe un objeto de la clase object, entonces lo que haremos
+				        		       //sera reescrbir como sirve el metodo equals, que previamente ya existia en la clas object
+									   //ya que el metodo que ya existia es demasiado general
+		
+		// Revisamos los casos triviales
+		if (o==null) return false;
+		if (o==this) return true;
+		
+		//verificamos que estamos comparando manzanas con manzanas
+		if (!(o instanceof RGBColor)) return false; /*instanceof verifica si alguna vez se creo un objeto o de tipo RGBColor*/
+		
+		//haremos un cast para pasar object o a RGBColor o
+		//cast: pasar una referencia de un tipo mas grande a una de tipo mas pequeno
+		//por ejemplo pasar un int a short
+		RGBColor otro = (RGBColor) o;
+		
+		//hacemos la comparacion profunda
+		return((this.red == otro.getRed())&&(this.blue == otro.getBlue())&&(this.green == otro.getGreen())&&(this.name.equals(otro.getName())));
+	}
+	
+	//metodo toString
+	public String toString() {
+		double cmyk[] = convertToCMYK();
+		String mensaje = String.format("El color %s tiene los siguientes atributos:\n\tRed: %d\n\tGreen: %d\n\tBlue: %d\n" 
+										+ "Su representacion en Cmyk es: (%.2f, %.2f, %.2f, %.2f)\n" 
+										+ "Su representacion e hexadecimal es: 0x%X",
+										this.name, this.red, this.green, this.blue,
+										cmyk[0], cmyk[1], cmyk[2], cmyk[3], getRGB());
+		return mensaje;
+	}
 }//fin clase RGBColor

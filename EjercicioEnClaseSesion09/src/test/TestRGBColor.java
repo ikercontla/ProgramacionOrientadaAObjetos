@@ -22,7 +22,22 @@ public class TestRGBColor {
 		
 		System.out.println(color3.getRGB());
 		
-		System.out.printf("la representacion hexadecimal del color es: %X", color3.getRGB());
+		System.out.printf("la representacion hexadecimal del color es: %X\n", color3.getRGB());
+		
+		//probamos que el metodo clone sirva
+		RGBColor color4 = color2.clone();
+		
+		System.out.println("Color 2 == color 4: " + (color2==color4));
+		
+		//probamos que el metodo equals sirva
+		System.out.println("color2.equals(color4): " + color2.equals(color4));
+		
+		//probamos que el metodo print sirva
+		System.out.println(color4);
+		
 	}
+	
+	
+		
 
 }
